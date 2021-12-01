@@ -4,19 +4,66 @@
     "x": 0,
     "y": 0,
     "uniqueID": 533586,
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "Geometry",
+            "ioValue": 10
+        }
+    ],
     "topLevel": true,
     "allAtoms": [
+        {
+            "atomType": "Input",
+            "name": "Geometry",
+            "x": 0.013333333333333334,
+            "y": 0.4134615384615385,
+            "uniqueID": 779036,
+            "ioValues": []
+        },
+        {
+            "atomType": "Code",
+            "name": "Code",
+            "x": 0.29828042328042326,
+            "y": 0.47756410256410253,
+            "uniqueID": 300893,
+            "ioValues": [
+                {
+                    "name": "Input1",
+                    "ioValue": 10
+                }
+            ],
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1){\n  return Input1.scale(25.4);        //return must be geometry;\n}\n\nreturn main(Input1)"
+        },
         {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9867724867724867,
             "y": 0.5,
             "uniqueID": 394358,
-            "ioValues": []
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "atoms/533586/300893Code"
+                }
+            ]
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Input1",
+            "ap2Primary": false,
+            "ap1ID": 779036,
+            "ap2ID": 300893
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 300893,
+            "ap2ID": 394358
+        }
+    ],
     "fileTypeVersion": 1,
     "simplify": false,
     "filetypeVersion": 1,
